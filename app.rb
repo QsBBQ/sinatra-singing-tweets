@@ -46,7 +46,7 @@ get "/tweets/edit/id" do
   end
 end
 
-puts "/tweets/:id" do
+put "/tweets/:id" do
   @tweet = Tweet.get(params[:id])
   if tweet
     @tweet.update(params[:tweet])
