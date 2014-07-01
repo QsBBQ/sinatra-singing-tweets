@@ -1,0 +1,10 @@
+<h2>Add a Tweet</h2>
+<form method="POST" action="/">
+  <label>the tweet
+    <input type="text" name="tweet[content]" value="<%= @tweet.content %>" />
+  </label><br />
+  <label>the tweet's owner
+    <input type="text" name="tweet[user]"><%= @tweet.owner %></textarea>
+  </label><br />
+  <button>Create Tweet!</button>
+</form>

@@ -1,0 +1,11 @@
+<% @tweets.each do |tweet| %>
+  <h3><%= tweet.content %> by <%= tweet.owner %></h3>
+  <a href="tweets/<%= tweet.id %>">view</a>
+  <a href="tweets/edit/<%= tweet.id %>">edit</a>
+  <form action="/tweets/<%= tweet.id %>" method="">
+    <input type="hidden" name="_method" value="delete" />
+    <input type="submit" value="Delete">
+  </form>
+  <hr>
+<% end %>
+<a href="/new">Add a new Tweet!</a>

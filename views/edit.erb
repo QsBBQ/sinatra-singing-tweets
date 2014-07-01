@@ -1,0 +1,11 @@
+<h2>Add a Wall</h2>
+<form method="PUT" action="/tweets/<%= @tweet.id %>" >
+  <input type="hidden" name="_method" value="PUT" />
+  <label>The Tweet</label>
+    <input type="text" name="tweet[content]" value="<%=@tweet.content %>" />
+  <br/>
+
+  <label>The Username</label>
+  <textarea name="tweet[owner]"><%=@tweet.owner %></textarea>
+  <button>Update the Tweet!</button>
+</form>
