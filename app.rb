@@ -13,7 +13,7 @@ DataMapper.finalize
 DataMapper.auto_upgrade!
 
 get "/" do
-  @tweets = tweet.all
+  @tweets = Tweet.all
   erb :tweets
 end
 
@@ -30,7 +30,7 @@ end
 post "/tweets" do
   new_tweet = params[:tweet]
   @tweet = Tweet.create(new_tweet_info)
-  if @tweet.saved
+  if @tweet.saved?
     redirect "/"
   else
     erb :new
